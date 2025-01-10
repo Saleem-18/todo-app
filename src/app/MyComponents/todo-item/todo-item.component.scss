@@ -1,0 +1,30 @@
+.todo-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white; /* Default background */
+  transition: background-color 0.3s ease;
+  border-radius: 10px; /* Curved edges */
+}
+
+.todo-item:hover {
+  background-color: #f0f0f0; /* Slight hover effect for all todos */
+}
+
+.todo-item.completed {
+  background-color: lightgreen; /* Light green background for completed todos */
+}
+
+.todo-item.completed:hover {
+  background-color: lightgrey; /* Keep light green background on hover for completed todos */
+}
+
+.todo-item.uncompleted {
+  background-color: #ffcccc; /* Red background for uncompleted todos */
+}
+
+.todo-item.uncompleted:hover {
+  background-color: lightgrey; /* Lighter red when hovering over uncompleted todos */
+}
+.btn-warning{
+  margin-left: 5px;
+}

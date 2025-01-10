@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="text-center mb-5 mt-5">{{title}}</h1>
+<!-- <app-add-todo (todoAdd)="addTodo($event)" ></app-add-todo> -->
+<div class="row">
+  <div class="col-12 d-flex justify-content-between align-items-center">
+<h2 class="mt-3"> Your Todos</h2>
+<button class=" btn btn-sm btn-primary " [routerLink]="'/add'" routerLinkActive="active">
+  Add Todo
+</button>
+</div>
+</div>
+<div *ngIf="todos.length === 0; else elseBlock">No Todos to display</div>
+<ng-template #elseBlock>
+  <div *ngFor="let todo of sortedTodos; index as i" class="mt-3">
+    <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)"   (todoUpdate)="updateTodo($event)"> </app-todo-item>
+  </div>
+</ng-template>
+</div>

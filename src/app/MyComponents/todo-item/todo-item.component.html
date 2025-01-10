@@ -1,0 +1,26 @@
+<div
+  class="todo-item"
+  [ngClass]="{ 'completed': !todo.active, 'uncompleted': todo.active }"
+>
+<h4 [style.text-decoration]="!todo.active ? 'line-through' : 'none'">
+  {{ todo.title }}
+</h4>
+<p [style.text-decoration]="!todo.active ? 'line-through' : 'none'">{{ todo.desc }}</p>
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="toDo" (change)="onToggle(todo)" [checked]="!todo.active">
+  <label class="form-check-label" for="toDo{{i}}">Mark as done</label>
+</div>
+<b *ngIf="!todo.active" class="text-dark">
+  To update this Todo, please uncheck "Mark as done" first.
+</b>
+<br/>
+<button type="button" class="btn btn-sm btn-danger " (click)="onDelete(todo)">Delete</button>
+<button
+*ngIf="todo.active"
+type="button"
+class="btn btn-sm btn-warning"
+(click)="onEdit(todo)"
+>
+Edit
+</button>
+</div>
