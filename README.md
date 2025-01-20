@@ -2,6 +2,10 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+## View Live Here
+
+https://saleem-18.github.io/todo-app/
+
 ## Development server
 
 To start a local development server, run:
@@ -44,6 +48,3 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
-## view here
-
-https://saleem-18.github.io/todo-app/
